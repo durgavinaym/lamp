@@ -16,24 +16,24 @@
 
 # on node amazon-linux 
 
-sudo passwd ec2-user         [ give the password with 8 charcters]
-sudo vi /etc/ssh/sshd_config [ password authentiction as yes]
-sudo systemctl restart sshd
+* sudo passwd ec2-user         [ give the password with 8 charcters]
+* sudo vi /etc/ssh/sshd_config [ password authentiction as yes]
+* sudo systemctl restart sshd
 
-after install check version 
-ansible --version
-add the private of the node to the /etc/ansible/hosts
+* after install check version 
+-->>ansible --version
+* add the private of the node to the /etc/ansible/hosts
 
 # install-docker-on-ec2-not-using-ansible.sh
 
-sudo yum install -y amazon-linux-extras
-sudo amazon-linux-extras enable python3.8 ansible2 docker
-sudo yum clean metadata
-sudo yum install -y python3.8 ansible docker
-sudo python3.8 -m pip install pip --upgrade
-sudo /usr/local/bin/pip3.8 install boto boto3 docker-compose
-sudo systemctl enable docker.service
-sudo systemctl start docker.service
+* sudo yum install -y amazon-linux-extras
+* sudo amazon-linux-extras enable python3.8 ansible2 docker
+* sudo yum clean metadata
+* sudo yum install -y python3.8 ansible docker
+* sudo python3.8 -m pip install pip --upgrade
+* sudo /usr/local/bin/pip3.8 install boto boto3 docker-compose
+* sudo systemctl enable docker.service
+* sudo systemctl start docker.service
 
 # Create the requirment.yml and install all the requirments using playbook
 
